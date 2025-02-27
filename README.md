@@ -1,4 +1,4 @@
-Python-weather-application - DevOps Project with Docker
+python-weather-application - DevOps Project with Docker
 
 🌍 Overview
 
@@ -16,8 +16,9 @@ OpenWeatherMap API (Weather data)
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/Python-weather-application.git
-cd Python-weather-application
+git clone https://github.com/yourusername/python-weather-application
+
+cd python-weather-application
 
 2️⃣ Set Up Environment Variables
 
@@ -27,16 +28,16 @@ WEATHER_API_KEY=your_api_key_here
 
 3️⃣ Build the Docker Image
 
-docker build -t weather-app .
+docker build -t python-weather-application .
 
 4️⃣ Run the Container
 
-docker run --env-file .env weather-app
+docker run -it --env-file .env python-weather-application
 
 
 📂 Project Structure
 
-📦 Python-weather-application
+📦 python-weather-application
 ├── 📄 app.py              # Main application file
 ├── 📄 requirements.txt    # Dependencies
 ├── 📄 Dockerfile          # Docker instructions
