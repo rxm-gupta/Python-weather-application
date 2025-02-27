@@ -14,26 +14,59 @@ OpenWeatherMap API (Weather data)
 
 🚀 Getting Started
 
+
+0️⃣ We can create an Ubuntu EC2 Instance on AWS and run the below commands to install docker.
+
+```bash
+sudo apt update
+sudo apt install docker.io -y
+```
+
+Start Docker Daemon
+
+To verify if the Docker daemon is running and active, use the following command
+
+```bash
+sudo systemctl status docker
+```
+
+If the daemon is not running, start it with
+```bash
+sudo systemctl start docker
+```
+
+Grant User Access to Docker
+
+To allow your user to run Docker commands without sudo, add the user to the Docker group
+```bash
+sudo usermod -aG docker ubuntu
+```
+Replace ubuntu with your actual username if needed
+
+Note: You must log out and log back in for the changes to take effect.
+
+🎉 Docker is Installed, Up, and Running! 🚀
+
 1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/python-weather-application
-
+```bash
+git clone https://github.com/rxm-gupta/python-weather-application
 cd python-weather-application
+```
 
 2️⃣ Set Up Environment Variables
 
---Create a .env file in the project root and add your OpenWeatherMap API key--
-
+Create a .env file in the project root and add your OpenWeatherMap API key
+```bash
 WEATHER_API_KEY=your_api_key_here
-
+```
 3️⃣ Build the Docker Image
-
+```bash
 docker build -t python-weather-application .
-
+```
 4️⃣ Run the Container
-
+```bash
 docker run -it --env-file .env python-weather-application
-
+```
 
 LFG🔥 Our app will now be running🥳🥳
 
@@ -41,28 +74,28 @@ LFG🔥 Our app will now be running🥳🥳
 
 5️⃣ Push the Docker Image
 
---Login to Docker Hub--
-
+Login to Docker Hub
+```bash
 docker login
-
---Tag your Docker image with your Docker Hub username--
-
+```
+Tag your Docker image with your Docker Hub username
+```bash
 docker tag python-weather-application your-dockerhub-username/python-weather-application:latest
-
---Push the Image to Docker Hub--
-
+```
+Push the Image to Docker Hub
+```bash
 docker push your-dockerhub-username/python-weather-application:latest
-
+```
 6️⃣ Pull the Docker Image
 
---To run the application on another machine, simply pull the image--
-
+To run the application on another machine, simply pull the image
+```bash
 docker pull your-dockerhub-username/python-weather-application:latest
-
---Then run it--
-
+```
+Then run it
+```bash
 docker run -it --env-file .env your-dockerhub-username/weather-app
-
+```
 
 
 
