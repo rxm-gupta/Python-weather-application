@@ -22,7 +22,7 @@ cd python-weather-application
 
 2️⃣ Set Up Environment Variables
 
-Create a .env file in the project root and add your OpenWeatherMap API key:
+--Create a .env file in the project root and add your OpenWeatherMap API key--
 
 WEATHER_API_KEY=your_api_key_here
 
@@ -33,6 +33,37 @@ docker build -t python-weather-application .
 4️⃣ Run the Container
 
 docker run -it --env-file .env python-weather-application
+
+
+LFG🔥 Our app will now be running🥳🥳
+
+
+
+5️⃣ Push the Docker Image
+
+--Login to Docker Hub--
+
+docker login
+
+--Tag your Docker image with your Docker Hub username--
+
+docker tag python-weather-application your-dockerhub-username/python-weather-application:latest
+
+--Push the Image to Docker Hub--
+
+docker push your-dockerhub-username/python-weather-application:latest
+
+6️⃣ Pull the Docker Image
+
+--To run the application on another machine, simply pull the image--
+
+docker pull your-dockerhub-username/python-weather-application:latest
+
+--Then run it--
+
+docker run -it --env-file .env your-dockerhub-username/weather-app
+
+
 
 
 📂 Project Structure
