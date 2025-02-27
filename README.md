@@ -95,7 +95,7 @@ docker pull your-dockerhub-username/python-weather-application:latest
 ```
 Then run it
 ```bash
-docker run -it --env-file .env your-dockerhub-username/weather-app
+docker run -it --env-file .env your-dockerhub-username/python-weather-application
 ```
 
 *************************
