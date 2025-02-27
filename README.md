@@ -15,7 +15,7 @@ OpenWeatherMap API (Weather data)
 🚀 Getting Started
 
 
-0️⃣ We can create an Ubuntu EC2 Instance on AWS and run the below commands to install docker.
+1️⃣ We can create an Ubuntu EC2 Instance on AWS and run the below commands to install docker.
 
 ```bash
 sudo apt update
@@ -47,23 +47,24 @@ Note: You must log out and log back in for the changes to take effect.
 
 🎉 Docker is Installed, Up, and Running! 🚀
 
-1️⃣ Clone the Repository
+2️⃣ Clone the Repository
 ```bash
 git clone https://github.com/rxm-gupta/python-weather-application
 cd python-weather-application
 ```
 
-2️⃣ Set Up Environment Variables
+3️⃣ Set Up Environment Variables
 
 Create a .env file in the project root and add your OpenWeatherMap API key
 ```bash
 WEATHER_API_KEY=your_api_key_here
 ```
-3️⃣ Build the Docker Image
+
+4️⃣ Build the Docker Image
 ```bash
 docker build -t python-weather-application .
 ```
-4️⃣ Run the Container
+5️⃣ Run the Container
 ```bash
 docker run -it --env-file .env python-weather-application
 ```
@@ -72,7 +73,7 @@ LFG🔥 Our app will now be running🥳🥳
 
 
 
-5️⃣ Push the Docker Image
+6️⃣ Push the Docker Image
 
 Login to Docker Hub
 ```bash
@@ -86,7 +87,7 @@ Push the Image to Docker Hub
 ```bash
 docker push your-dockerhub-username/python-weather-application:latest
 ```
-6️⃣ Pull the Docker Image
+7️⃣ Pull the Docker Image
 
 To run the application on another machine, simply pull the image
 ```bash
@@ -97,7 +98,7 @@ Then run it
 docker run -it --env-file .env your-dockerhub-username/weather-app
 ```
 
-
+*************************
 
 📂 Project Structure
 
@@ -107,6 +108,22 @@ docker run -it --env-file .env your-dockerhub-username/weather-app
 ├── 📄 Dockerfile          # Docker instructions
 ├── 📄 .env.example        # Environment variables 
 ├── 📄 README.md           # Project documentation
+
+
+*************************
+HOW TO CREATE A requirements.txt FILE
+
+Open Terminal (Linux/Mac) or Command Prompt (Windows).
+
+Navigate to your project folder where app.py is located.
+
+Run:
+```bash
+sudo apt install python3-pip
+pip freeze > requirements.txt
+```
+This creates a requirements.txt file with all installed dependencies.
+**************************
 
 
 🎯 Happy Coding & DevOps 🚀
